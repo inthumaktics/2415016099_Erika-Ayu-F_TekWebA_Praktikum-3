@@ -8,28 +8,28 @@ const taskInput = document.getElementById("taskInput");
 const addBtn = document.getElementById("addBtn");
 const taskList = document.getElementById("taskList");
 
-// --- Change Background Color ---
+//ubah background
 bgColorSelect.addEventListener("change", () => {
     body.style.backgroundColor = bgColorSelect.value;
 });
 
-// --- Change Font Size ---
+//ubah size font
 fontSizeSlider.addEventListener("input", () => {
     body.style.fontSize = fontSizeSlider.value + "px";
 });
 
-// --- Toggle Dark Mode ---
+//dark mode
 toggleDarkBtn.addEventListener("click", () => {
     body.classList.toggle("dark-mode");
     toggleDarkBtn.textContent = body.classList.contains("dark-mode") ? "☀️ Light Mode" : "🌙 Dark Mode";
 });
 
-// --- Change Font Style ---
+//ubah style font
 fontStyleSelect.addEventListener("change", () => {
     body.style.fontFamily = fontStyleSelect.value;
 });
 
-// --- Add Task ---
+//menambahkan tugas
 addBtn.addEventListener("click", addTask);
 taskInput.addEventListener("keypress", (e) => {
     if (e.key === "Enter") addTask();
@@ -42,16 +42,16 @@ function addTask() {
     const li = document.createElement("li");
     li.textContent = taskText;
 
-    // Delete button
+    //button hapus
     const delBtn = document.createElement("button");
     delBtn.textContent = "X";
     delBtn.className = "delete";
     delBtn.onclick = () => li.remove();
 
-    // Edit on double click
+    //double click untuk edit
     li.ondblclick = () => editTask(li);
 
-    // Mark completed
+    //tugas selesai
     li.onclick = (e) => {
         if (e.target.tagName !== "BUTTON") {
             li.classList.toggle("completed");
@@ -63,7 +63,7 @@ function addTask() {
     taskInput.value = "";
 }
 
-// --- Edit Task ---
+//edit tugas
 function editTask(li) {
     const currentText = li.firstChild.textContent;
     const input = document.createElement("input");
