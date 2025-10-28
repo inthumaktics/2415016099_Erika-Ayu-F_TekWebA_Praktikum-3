@@ -1,0 +1,76 @@
+body {
+    font-family: sans-serif;
+}
+
+.container {
+    width: 350px;
+    margin: 0 auto;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+}
+
+#taskList li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.close {
+    color: red;
+    float: right;
+    cursor: pointer;
+}
+
+.selector {
+    width: 350px;
+    margin: 0 auto;
+}
+
+body {
+    transition: background 0.5s ease;
+}
+
+/* Warna-warna background */
+.bg-default {
+    background-color: white;
+}
+
+.bg-blue {
+    background-color: #007BFF;
+    color: white;
+}
+
+.bg-green {
+    background-color: #28a745;
+    color: white;
+}
+
+.bg-purple {
+    background-color: #6f42c1;
+    color: white;
+}
+
+.bg-gradient {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: white;
+}
+
+.bg-pattern {
+    background: repeating-linear-gradient(
+        45deg,
+        #f3f3f3,
+        #f3f3f3 10px,
+        #e1e1e1 10px,
+        #e1e1e1 20px
+    );
+}
