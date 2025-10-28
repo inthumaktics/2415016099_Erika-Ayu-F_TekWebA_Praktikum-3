@@ -1,76 +1,77 @@
 body {
-    font-family: sans-serif;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: lightgreen;
+    color: #222;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: center;
+    padding: 20px;
 }
 
-.container {
+.controls {
+    margin-bottom: 20px;
+}
+
+.todo-container {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
     width: 350px;
     margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
 }
 
-input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    box-sizing: border-box;
+.input-area {
+    margin-bottom: 20px;
 }
 
-#taskList {
-    list-style: none;
-    padding: 0;
+#taskInput {
+    width: 70%;
+    padding: 8px;
+    font-size: 16px;
 }
 
-#taskList li {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-}
-
-.close {
-    color: red;
-    float: right;
+#addBtn {
+    padding: 8px 12px;
+    margin-left: 4px;
     cursor: pointer;
 }
 
-.selector {
-    width: 350px;
-    margin: 0 auto;
+ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-body {
-    transition: background 0.5s ease;
+li {
+    background: #f9f9f9;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s;
 }
 
-/* Warna-warna background */
-.bg-default {
-    background-color: white;
+li.completed {
+    text-decoration: line-through;
+    color: gray;
 }
 
-.bg-blue {
-    background-color: #007BFF;
+button.delete {
+    background-color: red;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+
+.dark-mode {
+    background-color: #222;
     color: white;
 }
 
-.bg-green {
-    background-color: #28a745;
+.dark-mode li {
+    background: #333;
     color: white;
-}
-
-.bg-purple {
-    background-color: #6f42c1;
-    color: white;
-}
-
-.bg-gradient {
-    background: linear-gradient(135deg, #00c6ff, #0072ff);
-    color: white;
-}
-
-.bg-pattern {
-    background: repeating-linear-gradient(
-        45deg,
-        #f3f3f3,
-        #f3f3f3 10px,
-        #e1e1e1 10px,
-        #e1e1e1 20px
-    );
 }

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="selector">
+    <div class="background">
+        <select id="backgroundSelector">
+            <option value="bg-default">Default</option>
+            <option value="bg-blue">Blue</option>
+            <option value="bg-green">Green</option>
+            <option value="bg-purple">Purple</option>
+            <option value="bg-gradient">Gradient</option>
+            <option value="bg-pattern">Pattern</option>
+        </select>
+    </div>
+    <div class="incfontsize">
+    </div>
+
+    <div class="decfontsize">
+    </div>
+    <div class="Togdark"></div>
+    <div class="verdana"></div>
+</div>
+
+    <div class="container">
+        <h2>My To-Do List</h2>
+        <input type="text" id="newTask" placeholder="Add a new task...">
+        <button onclick="addTask()">Add</button>
+
+        <ul id="taskList">
+        </ul>
+    </div>
+    <script src="dom.js"></script>
+
+</body>
+</html>
